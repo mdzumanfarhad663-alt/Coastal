@@ -64,3 +64,10 @@ html{scroll-padding-top:96px}.site-nav{gap:32px}.site-nav a:not(.button):hover,.
 .site-header{position:fixed;background:transparent;box-shadow:none;transition:background .3s ease,box-shadow .3s ease,padding .3s ease}
 .site-header.scrolled{position:fixed;background:rgba(27,109,176,.96);box-shadow:0 6px 24px rgba(13,57,94,.12)}
 @media(max-width:900px){.site-header .site-nav{background:var(--brand-blue)}}
+/* About collection: property imagery leads, without a second section heading. */
+.about-property-showcase{padding-top:24px;padding-bottom:clamp(90px,10vw,150px);text-align:center}
+.about-property-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1240px;margin:0 auto}
+.about-property-grid .property{display:block;height:430px;text-align:left}
+.about-property-more{margin-top:48px}
+@media(max-width:900px){.about-property-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.about-property-grid .property{height:390px}}
+@media(max-width:560px){.about-property-showcase{padding-top:0}.about-property-grid{grid-template-columns:1fr;gap:16px}.about-property-grid .property{height:390px}.about-property-more{margin-top:36px}}
