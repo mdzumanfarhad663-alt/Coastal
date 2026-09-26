@@ -73,6 +73,21 @@ document.querySelector('[data-booking-form]')?.addEventListener('submit', event 
   window.location.assign(`https://hotels.cloudbeds.com/en/reservation/${encodeURIComponent(select.value)}/?currency=usd`);
 });
 
+document.querySelector('[data-contact-form]')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  const name = String(data.get('name') || '').trim();
+  const email = String(data.get('email') || '').trim();
+  const topic = String(data.get('topic') || '').trim();
+  const message = String(data.get('message') || '').trim();
+  const subject = encodeURIComponent(`Coastal Getaway: ${topic}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTopic: ${topic}\n\n${message}`);
+  form.querySelector('[data-contact-status]').textContent = 'Your email app is opening. Please review and send the message there.';
+  window.location.href = `mailto:info@coastalgetaway.com?subject=${subject}&body=${body}`;
+});
+
 const showReview = index => {
   if (!reviewTrack || !reviewSlides.length) return;
   reviewIndex = (index + reviewSlides.length) % reviewSlides.length;
