@@ -22,6 +22,30 @@ nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => 
   menuToggle?.setAttribute('aria-expanded', 'false');
 }));
 
+const categoryTrack = document.querySelector('[data-category-track]');
+const categoryControls = document.querySelector('[data-category-controls]');
+const categoryPrev = document.querySelector('[data-category-prev]');
+const categoryNext = document.querySelector('[data-category-next]');
+const updateCategories = () => {
+  if (!categoryTrack || !categoryControls) return;
+  const overflow = categoryTrack.scrollWidth > categoryTrack.clientWidth + 2;
+  categoryControls.hidden = !overflow;
+  categoryPrev.disabled = categoryTrack.scrollLeft < 2;
+  categoryNext.disabled = categoryTrack.scrollLeft + categoryTrack.clientWidth >= categoryTrack.scrollWidth - 2;
+};
+const moveCategory = direction => {
+  const card = categoryTrack?.querySelector('.category-card');
+  if (!card) return;
+  const gap = parseFloat(getComputedStyle(categoryTrack).columnGap) || 0;
+  categoryTrack.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: 'smooth' });
+};
+categoryPrev?.addEventListener('click', () => moveCategory(-1));
+categoryNext?.addEventListener('click', () => moveCategory(1));
+categoryTrack?.addEventListener('scroll', updateCategories, { passive: true });
+window.addEventListener('resize', updateCategories);
+window.addEventListener('load', updateCategories);
+updateCategories();
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
