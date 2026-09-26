@@ -3,10 +3,11 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
+const hero = document.querySelector('.hero, .about-hero');
 let reviewIndex = 0;
 
 const updateHeader = () => {
-  const scrolled = window.scrollY > 40;
+  const scrolled = hero ? hero.getBoundingClientRect().bottom <= header.offsetHeight : window.scrollY > 40;
   header.classList.toggle('scrolled', scrolled);
 };
 window.addEventListener('scroll', updateHeader, { passive: true });
