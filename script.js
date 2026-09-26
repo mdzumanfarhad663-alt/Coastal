@@ -2,6 +2,9 @@ const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const floatingBooking = document.querySelector('[data-floating-booking]');
+const reviewTrack = document.querySelector('[data-review-track]');
+const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
+let reviewIndex = 0;
 
 const updateHeader = () => {
   const scrolled = window.scrollY > 40;
@@ -34,7 +37,16 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.querySelector('[data-booking-form]')?.addEventListener('submit', event => {
   event.preventDefault();
   const button = event.currentTarget.querySelector('button');
-  const original = button.innerHTML;
-  button.innerHTML = 'Opening availability <span>↗</span>';
-  setTimeout(() => { button.innerHTML = original; }, 1800);
+  const original = button.textContent;
+  button.textContent = 'Opening availability';
+  setTimeout(() => { button.textContent = original; }, 1800);
 });
+
+const showReview = index => {
+  if (!reviewTrack || !reviewSlides.length) return;
+  reviewIndex = (index + reviewSlides.length) % reviewSlides.length;
+  reviewTrack.style.transform = `translateX(-${reviewIndex * 100}%)`;
+};
+document.querySelector('[data-review-prev]')?.addEventListener('click', () => showReview(reviewIndex - 1));
+document.querySelector('[data-review-next]')?.addEventListener('click', () => showReview(reviewIndex + 1));
+setInterval(() => showReview(reviewIndex + 1), 6500);
