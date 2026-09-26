@@ -1,7 +1,6 @@
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
-const floatingBooking = document.querySelector('[data-floating-booking]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
 let reviewIndex = 0;
@@ -9,7 +8,6 @@ let reviewIndex = 0;
 const updateHeader = () => {
   const scrolled = window.scrollY > 40;
   header.classList.toggle('scrolled', scrolled);
-  floatingBooking?.classList.toggle('visible', window.scrollY > window.innerHeight * .55);
 };
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
@@ -50,3 +48,9 @@ const showReview = index => {
 document.querySelector('[data-review-prev]')?.addEventListener('click', () => showReview(reviewIndex - 1));
 document.querySelector('[data-review-next]')?.addEventListener('click', () => showReview(reviewIndex + 1));
 setInterval(() => showReview(reviewIndex + 1), 6500);
+
+document.querySelector('.newsletter-form')?.addEventListener('submit', event => {
+  event.preventDefault();
+  const button = event.currentTarget.querySelector('button');
+  button.textContent = 'Subscribed';
+});
