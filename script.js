@@ -1,8 +1,13 @@
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
+const floatingBooking = document.querySelector('[data-floating-booking]');
 
-const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 40);
+const updateHeader = () => {
+  const scrolled = window.scrollY > 40;
+  header.classList.toggle('scrolled', scrolled);
+  floatingBooking?.classList.toggle('visible', window.scrollY > window.innerHeight * .55);
+};
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
 
