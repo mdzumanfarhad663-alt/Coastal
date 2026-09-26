@@ -71,3 +71,15 @@ html{scroll-padding-top:96px}.site-nav{gap:32px}.site-nav a:not(.button):hover,.
 .about-property-more{margin-top:48px}
 @media(max-width:900px){.about-property-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.about-property-grid .property{height:390px}}
 @media(max-width:560px){.about-property-showcase{padding-top:0}.about-property-grid{grid-template-columns:1fr;gap:16px}.about-property-grid .property{height:390px}.about-property-more{margin-top:36px}}
+/* Coastal's original typography and near-black text, with a calmer heading scale. */
+:root{--ink:#171717;--serif:'Calistoga',Georgia,serif;--sans:'Poppins',Arial,sans-serif}
+body{color:var(--ink);font-family:var(--sans)}
+h1,h2,.hero h1,.about-hero h1,.intro h2,.section-heading h2,.story-copy h2,.reviews h2,.newsletter h2,.about-intro h2,.about-approach h2,.about-help h2,.about-chg h2,.about-owner h2{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.17}
+.hero h1{font-size:clamp(48px,5.5vw,76px)}
+.about-hero h1{font-size:clamp(48px,5.5vw,72px)}
+.intro h2,.section-heading h2,.story-copy h2,.reviews h2,.newsletter h2,.about-intro h2,.about-approach h2,.about-help h2,.about-chg h2,.about-owner h2{font-size:clamp(36px,3.7vw,52px)}
+.about-collection strong,.footer-family>span,.review-slide blockquote,.reviews .review-slide blockquote{font-family:var(--serif);font-weight:400}
+.category-content strong{font-size:29px;font-weight:400}
+.intro-copy,.story-copy>p:not(.eyebrow),.about-intro-copy p,.about-help-copy>p:not(.about-kicker),.about-owner-inner>div:last-child p,.about-approach-heading>p,.about-chg p:not(.about-kicker){font-size:17px;line-height:1.7}
+.newsletter-copy>p:last-child,.newsletter-form p,.hero-copy,.about-hero-content>p:last-child{font-family:var(--sans)}
+@media(max-width:560px){.hero h1,.about-hero h1{font-size:clamp(42px,10vw,52px)}.intro h2,.section-heading h2,.story-copy h2,.reviews h2,.newsletter h2,.about-intro h2,.about-approach h2,.about-help h2,.about-chg h2,.about-owner h2{font-size:clamp(33px,8.5vw,40px)}.intro-copy,.story-copy>p:not(.eyebrow),.about-intro-copy p,.about-help-copy>p:not(.about-kicker),.about-owner-inner>div:last-child p,.about-approach-heading>p,.about-chg p:not(.about-kicker){font-size:16px}}
