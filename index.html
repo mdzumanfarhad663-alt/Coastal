@@ -28,50 +28,41 @@
 
   <main id="top">
     <section class="hero" aria-label="Find your next getaway">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/category-image-not-found-1.jpeg">
-        <source src="https://drive.usercontent.google.com/download?id=1SP3INdcuajnfHW5v12-kacjAEYFn3lvw&export=download" type="video/mp4" />
-      </video>
+      <div class="hero-image" role="img" aria-label="Pool at a Coastal Getaway property"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow">More places. Brighter days.</p>
         <h1>Ready to discover<br />somewhere new?</h1>
-        <p class="hero-copy">Affordable stays, memorable places, and a better way to book your next escape.</p>
+        <p class="hero-copy">Beachside hideaways, spacious suites, and mountain escapes. Find your place to stay.</p>
         <form class="booking-bar" id="booking" data-booking-form>
-          <label class="booking-field"><span>Choose a property</span><select aria-label="Choose a property"><option>Select a property</option><option>The Pineola</option><option>Hickory Falls Inn</option><option>Coastal Suites</option><option>Blind Pass Resort</option></select></label>
+          <label class="booking-field"><span>Choose a property</span><select aria-label="Choose a property" required><option value="" disabled selected>Select a property</option><optgroup label="Florida"><option value="FCy8xD">Island House · N. Redington Beach</option><option value="ivsspZ">Malibu Resort Motel · N. Redington Beach</option><option value="TorgMC">Blind Pass Resort · St. Pete Beach</option><option value="cJt1yj">Sea Shells Beach Club · Daytona Beach</option></optgroup><optgroup label="North Carolina"><option value="Cobncr">The Pineola · Newland</option><option value="hVAbiq">Coastal Suites · Wilmington</option></optgroup><optgroup label="California"><option value="onETkp">Patriots Boutique Motel · San Clemente</option><option value="mWqHnP">Bluebird Day Inn &amp; Suites · S. Lake Tahoe</option></optgroup></select></label>
           <button class="button" type="submit">Check Availability</button>
         </form>
       </div>
       <a class="scroll-cue" href="#intro"><span>Scroll to explore</span><i></i></a>
     </section>
 
-    <section class="intro section" id="intro">
-      <div class="intro-heading reveal"><h2>Your Coastal Getaway<br />Starts Here...</h2></div>
-      <div class="intro-copy reveal"><p>Welcome to Coastal Getaway Vacations, where you can book a variety of affordable, unique boutique hotel properties from the CHG portfolio.</p><p>From beach vacations in sunny Florida to mountain escapes in Lake Tahoe, California, discover comfortable places to stay and friendly teams who make every visit feel personal.</p><a class="button" href="#about">Our Story</a></div>
-    </section>
-
-    <section class="feature-story section" id="about">
+    <section class="feature-story section" id="intro">
       <div class="story-image reveal reveal-left"><img src="assets/category-image-not-found.jpg" alt="Coastal Getaway property at sunset" loading="lazy" /></div>
-      <div class="story-copy reveal reveal-right"><h2>More than a place<br />to stay.</h2><p>We hand-select properties with character, comfort, and the kind of hospitality that makes a trip memorable. Whether you are planning a beach vacation, a mountain escape, or an extended stay, we are here to help you find the right place.</p><a class="button" href="#getaways">Explore Our Getaways</a></div>
+      <div class="story-copy reveal reveal-right" id="about"><h2>Stay somewhere<br />with character.</h2><p>Coastal Getaway brings together welcoming boutique hotels, coastal suites, and mountain retreats across the US. Explore the collection and find a stay that feels right for your trip.</p><a class="button" href="#getaways">Explore Our Getaways</a></div>
     </section>
 
     <section class="getaways section" id="getaways">
       <div class="section-heading reveal"><h2>Places worth<br />coming back to.</h2></div>
       <div class="category-grid">
-        <a class="category-card category-card-tall reveal" href="#properties"><img src="assets/property-image-not-found-1.jpg" alt="Beach hotel getaway" loading="lazy" /><span class="category-content"><strong>Beach Hotels</strong><b class="card-button">View More</b></span></a>
-        <a class="category-card reveal reveal-delay" href="#properties"><img src="assets/property-image-not-found-2.jpg" alt="Coastal suite interior" loading="lazy" /><span class="category-content"><strong>Coastal Suites</strong><b class="card-button">View More</b></span></a>
-        <a class="category-card category-card-offset reveal reveal-delay-2" href="#properties"><img src="assets/property-image-not-found-3.jpg" alt="Mountain escape" loading="lazy" /><span class="category-content"><strong>Mountain Escapes</strong><b class="card-button">View More</b></span></a>
+        <a class="category-card reveal" href="https://coastalgetaway.com/property_cat/beach-hotels/"><img src="assets/category-image-not-found.jpg" alt="Beach hotel getaway" loading="lazy" /><span class="category-content"><strong>Beach Hotels</strong><b class="card-button">View More</b></span></a>
+        <a class="category-card reveal reveal-delay" href="https://coastalgetaway.com/property_cat/coastal-suites/"><img src="assets/property-image-not-found-2.jpg" alt="Coastal suite interior" loading="lazy" /><span class="category-content"><strong>Coastal Suites</strong><b class="card-button">View More</b></span></a>
+        <a class="category-card reveal reveal-delay-2" href="https://coastalgetaway.com/property_cat/mountain-escapes/"><img src="assets/category-image-not-found-1.jpeg" alt="Mountain escape" loading="lazy" /><span class="category-content"><strong>Mountain Escapes</strong><b class="card-button">View More</b></span></a>
       </div>
     </section>
 
     <section class="properties section" id="properties">
       <div class="section-heading reveal"><h2>Featured<br />Properties</h2></div>
       <div class="property-grid">
-        <a class="property reveal" href="#booking"><img src="assets/property-image-not-found-1.jpg" alt="The Pineola" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>The Pineola</h3><span class="property-details"><span class="property-place">Newland, NC</span><span class="card-button">View Property</span></span></span></a>
-        <a class="property reveal reveal-delay" href="#booking"><img src="assets/property-image-not-found-2.jpg" alt="Hickory Falls Inn" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Hickory Falls Inn</h3><span class="property-details"><span class="property-place">North Carolina</span><span class="card-button">View Property</span></span></span></a>
-        <a class="property reveal reveal-delay-2" href="#booking"><img src="assets/property-image-not-found-3.jpg" alt="Coastal Suites" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Coastal Suites</h3><span class="property-details"><span class="property-place">Wilmington, NC</span><span class="card-button">View Property</span></span></span></a>
-        <a class="property reveal" href="#booking"><img src="assets/property-image-not-found-4.jpg" alt="Blind Pass Resort" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Blind Pass Resort</h3><span class="property-details"><span class="property-place">St. Pete Beach, FL</span><span class="card-button">View Property</span></span></span></a>
+        <a class="property reveal" href="https://coastalgetaway.com/property/the-pineola-newland-nc/"><img src="assets/category-image-not-found-1.jpeg" alt="The Pineola" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>The Pineola</h3><span class="property-details"><span class="property-place">Newland, NC</span><span class="card-button">View Property</span></span></span></a>
+        <a class="property reveal reveal-delay" href="https://coastalgetaway.com/property/coastal-suites/"><img src="assets/property-image-not-found-2.jpg" alt="Coastal Suites" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Coastal Suites</h3><span class="property-details"><span class="property-place">Wilmington, NC</span><span class="card-button">View Property</span></span></span></a>
+        <a class="property reveal" href="https://coastalgetaway.com/property/blind-pass-resort/"><img src="assets/property-image-not-found-5.jpg" alt="Blind Pass Resort" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Blind Pass Resort</h3><span class="property-details"><span class="property-place">St. Pete Beach, FL</span><span class="card-button">View Property</span></span></span></a>
       </div>
-      <div class="section-action reveal"><a class="button" href="#getaways">View All Properties</a></div>
+      <div class="section-action reveal"><a class="button" href="https://coastalgetaway.com/">View All Properties</a></div>
     </section>
 
     <section class="reviews section reveal" id="reviews">
@@ -79,31 +70,29 @@
       <div class="review-shell">
         <button class="review-arrow review-arrow-prev" type="button" data-review-prev aria-label="Previous review"><span>←</span></button>
         <div class="review-viewport"><div class="review-track" data-review-track>
-          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>They have much better deals than other online travel agencies and their customer service is way better!</blockquote><div class="review-person"><img src="assets/thumb.jpg" alt="Katherine R." /><div><strong>Katherine R.</strong><span>★★★★★</span></div></div></article>
-          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>Everything went smoothly, just like any other major booking service. Our location was clean, peaceful, and close to the beach.</blockquote><div class="review-person"><img src="assets/thumb-1.jpg" alt="Marius K." /><div><strong>Marius K.</strong><span>★★★★★</span></div></div></article>
-          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>The sunrise was magnificent. The room was cozy and clean—we could not have asked for a better weekend getaway.</blockquote><div class="review-person"><img src="assets/thumb-2.jpg" alt="Matthew J." /><div><strong>Matthew J.</strong><span>★★★★★</span></div></div></article>
-          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>A comfortable stay, a great location, and friendly service from start to finish.</blockquote><div class="review-person"><img src="assets/thumb.jpg" alt="Coastal Getaway guest" /><div><strong>Coastal Getaway guest</strong><span>★★★★★</span></div></div></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>They have much better deals than other online travel agencies and their customer service is WAY better!</blockquote><div class="review-person"><span class="review-avatar" aria-hidden="true">KR</span><div><strong>Katherine R.</strong><span>January 2021 · Yelp review</span></div></div><a class="review-source" href="https://www.yelp.com/biz/coastal-getaway-vacations-dayt-bch-sh">Read original review</a></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>Our location was clean and peaceful and just block from the beach, with plenty of parking.</blockquote><div class="review-person"><span class="review-avatar" aria-hidden="true">MK</span><div><strong>Marius K.</strong><span>December 2020 · Yelp review</span></div></div><a class="review-source" href="https://www.yelp.com/biz/coastal-getaway-vacations-dayt-bch-sh">Read original review</a></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>The sunrise was magnificent, the room was cozy and clean. Couldn't ask for a better weekend get away.</blockquote><div class="review-person"><span class="review-avatar" aria-hidden="true">MJ</span><div><strong>Matthew J.</strong><span>December 2020 · Yelp review</span></div></div><a class="review-source" href="https://www.yelp.com/biz/coastal-getaway-vacations-dayt-bch-sh">Read original review</a></article>
         </div></div>
         <button class="review-arrow review-arrow-next" type="button" data-review-next aria-label="Next review"><span>→</span></button>
       </div>
     </section>
 
-    <section class="cta" id="contact"><div class="cta-image"></div><div class="cta-content reveal"><h2>Find your next<br />getaway.</h2><a class="button" href="#booking">Explore Our Getaways</a></div></section>
     <section class="newsletter">
       <div class="newsletter-copy reveal"><p class="eyebrow">Stay in the know</p><h2>Get getaway inspiration<br />in your inbox.</h2><p>Be the first to hear about new properties, seasonal offers, and memorable places worth discovering.</p></div>
-      <form class="newsletter-form reveal"><label for="newsletter-email">Email address</label><div><input id="newsletter-email" type="email" placeholder="Enter your email address" required /><button class="button" type="submit">Subscribe</button></div><small>By subscribing, you agree to receive occasional emails from Coastal Getaway.</small></form>
+      <div class="newsletter-form reveal"><p>Want to hear about new stays and seasonal offers?</p><a class="button" href="mailto:info@coastalgetaway.com?subject=Getaway%20updates">Ask for updates</a><small>Email our team to request updates. No subscription is submitted on this page.</small></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-top">
       <a class="brand footer-brand" href="#top"><img src="assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a>
-      <div class="footer-column"><p class="footer-label">Explore</p><a href="#getaways">Our Getaways</a><a href="#properties">Featured Properties</a><a href="#about">About Coastal Getaway</a></div>
-      <div class="footer-column"><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a><span>Book direct for our best available rates.</span></div>
-      <div class="footer-social"><p class="footer-label">Follow the journey</p><div><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a></div></div>
+      <div class="footer-column"><p class="footer-label">Explore</p><a href="#getaways">Our Getaways</a><a href="#properties">Featured Properties</a><a href="https://coastalgetaway.com/about/">About Coastal Getaway</a><a href="https://coastalgetaway.com/contact/">Contact</a></div>
+      <div class="footer-column"><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a><span>Our team can help you find the right stay.</span></div>
+      <div class="footer-social"><p class="footer-label">Follow the journey</p><div><a href="https://www.facebook.com/coastalgetawayvacations" aria-label="Facebook">f</a><a href="https://www.instagram.com/coastalgetawayvacations/" aria-label="Instagram">◎</a></div></div>
     </div>
-    <div class="footer-family"><span>Coastal stays for every kind of escape.</span><strong>Beach Hotels</strong><strong>Coastal Suites</strong><strong>Mountain Escapes</strong></div>
-    <div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations. All rights reserved.</span><nav><a href="#">Site Map</a><a href="#">Accessibility</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></nav></div>
+    <div class="footer-family"><span>Coastal stays for every kind of escape.</span><a href="https://coastalgetaway.com/property_cat/beach-hotels/">Beach Hotels</a><a href="https://coastalgetaway.com/property_cat/coastal-suites/">Coastal Suites</a><a href="https://coastalgetaway.com/property_cat/mountain-escapes/">Mountain Escapes</a></div>
+    <div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations. All rights reserved.</span><span>1014 North Atlantic Avenue, Daytona Beach, FL 32118</span></div>
   </footer>
   <script src="script.js"></script>
 </body>
