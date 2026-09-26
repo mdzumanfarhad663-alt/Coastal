@@ -21,7 +21,6 @@
     <nav class="site-nav" data-nav>
       <a href="#getaways">Our Getaways</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
       <a class="nav-phone" href="tel:18773500053">877.350.0053</a>
       <a class="button button-small" href="#booking">Book Now</a>
     </nav>
@@ -45,11 +44,6 @@
       <a class="scroll-cue" href="#intro"><span>Scroll to explore</span><i></i></a>
     </section>
 
-    <div class="floating-booking" data-floating-booking aria-label="Quick booking search">
-      <div><small>Property</small><strong>Select a property</strong></div>
-      <button type="button" aria-label="Check availability">Check Availability</button>
-    </div>
-
     <section class="intro section" id="intro">
       <div class="intro-heading reveal"><h2>Your Coastal Getaway<br />Starts Here...</h2></div>
       <div class="intro-copy reveal"><p>Welcome to Coastal Getaway Vacations, where you can book a variety of affordable, unique boutique hotel properties from the CHG portfolio.</p><p>From beach vacations in sunny Florida to mountain escapes in Lake Tahoe, California, discover comfortable places to stay and friendly teams who make every visit feel personal.</p><a class="button" href="#about">Our Story</a></div>
@@ -70,31 +64,46 @@
     </section>
 
     <section class="properties section" id="properties">
-      <div class="section-heading split-heading reveal"><div><h2>Featured<br />Properties</h2></div><a class="button" href="#getaways">View All Properties</a></div>
+      <div class="section-heading reveal"><h2>Featured<br />Properties</h2></div>
       <div class="property-grid">
         <a class="property reveal" href="#booking"><img src="assets/property-image-not-found-1.jpg" alt="The Pineola" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>The Pineola</h3><span class="property-details"><span class="property-place">Newland, NC</span><span class="card-button">View Property</span></span></span></a>
         <a class="property reveal reveal-delay" href="#booking"><img src="assets/property-image-not-found-2.jpg" alt="Hickory Falls Inn" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Hickory Falls Inn</h3><span class="property-details"><span class="property-place">North Carolina</span><span class="card-button">View Property</span></span></span></a>
         <a class="property reveal reveal-delay-2" href="#booking"><img src="assets/property-image-not-found-3.jpg" alt="Coastal Suites" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Coastal Suites</h3><span class="property-details"><span class="property-place">Wilmington, NC</span><span class="card-button">View Property</span></span></span></a>
         <a class="property reveal" href="#booking"><img src="assets/property-image-not-found-4.jpg" alt="Blind Pass Resort" loading="lazy" /><span class="property-shade"></span><span class="property-content"><h3>Blind Pass Resort</h3><span class="property-details"><span class="property-place">St. Pete Beach, FL</span><span class="card-button">View Property</span></span></span></a>
       </div>
+      <div class="section-action reveal"><a class="button" href="#getaways">View All Properties</a></div>
     </section>
 
     <section class="reviews section reveal" id="reviews">
-      <div class="reviews-heading"><h2>Real stays.<br />Real stories.</h2><div class="review-controls"><button type="button" data-review-prev aria-label="Previous review">←</button><button type="button" data-review-next aria-label="Next review">→</button></div></div>
-      <div class="review-viewport"><div class="review-track" data-review-track>
-        <article class="review-slide"><div class="review-person"><img src="assets/thumb.jpg" alt="Katherine R." /><div><strong>Katherine R.</strong><span>★★★★★</span></div></div><blockquote>“They have much better deals than other online travel agencies and their customer service is way better!”</blockquote></article>
-        <article class="review-slide"><div class="review-person"><img src="assets/thumb-1.jpg" alt="Marius K." /><div><strong>Marius K.</strong><span>★★★★★</span></div></div><blockquote>“Everything went smoothly, just like any other major booking service. Our location was clean, peaceful, and close to the beach.”</blockquote></article>
-        <article class="review-slide"><div class="review-person"><img src="assets/thumb-2.jpg" alt="Matthew J." /><div><strong>Matthew J.</strong><span>★★★★★</span></div></div><blockquote>“The sunrise was magnificent. The room was cozy and clean—we could not have asked for a better weekend getaway.”</blockquote></article>
-        <article class="review-slide"><div class="review-person"><img src="assets/thumb.jpg" alt="Coastal Getaway guest" /><div><strong>Coastal Getaway guest</strong><span>★★★★★</span></div></div><blockquote>“A comfortable stay, a great location, and friendly service from start to finish.”</blockquote></article>
-      </div></div>
+      <div class="reviews-heading"><h2>Real stays.<br />Real stories.</h2></div>
+      <div class="review-shell">
+        <button class="review-arrow review-arrow-prev" type="button" data-review-prev aria-label="Previous review"><span>←</span></button>
+        <div class="review-viewport"><div class="review-track" data-review-track>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>They have much better deals than other online travel agencies and their customer service is way better!</blockquote><div class="review-person"><img src="assets/thumb.jpg" alt="Katherine R." /><div><strong>Katherine R.</strong><span>★★★★★</span></div></div></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>Everything went smoothly, just like any other major booking service. Our location was clean, peaceful, and close to the beach.</blockquote><div class="review-person"><img src="assets/thumb-1.jpg" alt="Marius K." /><div><strong>Marius K.</strong><span>★★★★★</span></div></div></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>The sunrise was magnificent. The room was cozy and clean—we could not have asked for a better weekend getaway.</blockquote><div class="review-person"><img src="assets/thumb-2.jpg" alt="Matthew J." /><div><strong>Matthew J.</strong><span>★★★★★</span></div></div></article>
+          <article class="review-slide"><span class="review-quote" aria-hidden="true">“</span><blockquote>A comfortable stay, a great location, and friendly service from start to finish.</blockquote><div class="review-person"><img src="assets/thumb.jpg" alt="Coastal Getaway guest" /><div><strong>Coastal Getaway guest</strong><span>★★★★★</span></div></div></article>
+        </div></div>
+        <button class="review-arrow review-arrow-next" type="button" data-review-next aria-label="Next review"><span>→</span></button>
+      </div>
     </section>
 
     <section class="cta" id="contact"><div class="cta-image"></div><div class="cta-content reveal"><h2>Find your next<br />getaway.</h2><a class="button" href="#booking">Explore Our Getaways</a></div></section>
+    <section class="newsletter">
+      <div class="newsletter-copy reveal"><p class="eyebrow">Stay in the know</p><h2>Get getaway inspiration<br />in your inbox.</h2><p>Be the first to hear about new properties, seasonal offers, and memorable places worth discovering.</p></div>
+      <form class="newsletter-form reveal"><label for="newsletter-email">Email address</label><div><input id="newsletter-email" type="email" placeholder="Enter your email address" required /><button class="button" type="submit">Subscribe</button></div><small>By subscribing, you agree to receive occasional emails from Coastal Getaway.</small></form>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-top"><a class="brand" href="#top"><img src="assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a><div><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a></div><div><p class="footer-label">Explore</p><a href="#getaways">Our Getaways</a><a href="#about">About</a><a href="#contact">Contact</a></div></div>
-    <div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations</span><span>Affordable stays. Unforgettable getaways.</span></div>
+    <div class="footer-top">
+      <a class="brand footer-brand" href="#top"><img src="assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a>
+      <div class="footer-column"><p class="footer-label">Explore</p><a href="#getaways">Our Getaways</a><a href="#properties">Featured Properties</a><a href="#about">About Coastal Getaway</a></div>
+      <div class="footer-column"><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a><span>Book direct for our best available rates.</span></div>
+      <div class="footer-social"><p class="footer-label">Follow the journey</p><div><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="X">𝕏</a></div></div>
+    </div>
+    <div class="footer-family"><span>Coastal stays for every kind of escape.</span><strong>Beach Hotels</strong><strong>Coastal Suites</strong><strong>Mountain Escapes</strong></div>
+    <div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations. All rights reserved.</span><nav><a href="#">Site Map</a><a href="#">Accessibility</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></nav></div>
   </footer>
   <script src="script.js"></script>
 </body>
