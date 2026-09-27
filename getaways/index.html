@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Coastal Getaway Vacations' boutique beach hotels, coastal suites, and mountain escapes. Find a property and check availability through its existing reservation system." />
+  <title>Our Getaways | Coastal Getaway Vacations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="getaways-page">
+  <header class="site-header" data-header>
+    <a class="brand" href="../index.html" aria-label="Coastal Getaway home"><img src="../assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+    <nav class="site-nav" data-nav aria-label="Main navigation"><a href="./" aria-current="page">Our Getaways</a><a href="../about.html">About</a><a class="nav-phone" href="tel:18773500053">877.350.0053</a><a class="button button-small" href="../index.html#booking">Book Now</a></nav>
+  </header>
+  <main>
+    <section class="getaways-hero" aria-labelledby="getaways-title">
+      <img src="../assets/category-image-not-found.jpg" alt="Oceanfront view at a Coastal Getaway property" fetchpriority="high" />
+      <div class="getaways-hero-shade"></div>
+      <div class="getaways-hero-inner"><h1 id="getaways-title">Explore Our Getaways</h1><p>Independent beach hotels, coastal suites, and mountain stays. Find the place that fits your trip.</p></div>
+    </section>
+    <section class="collection section" aria-labelledby="collection-title" id="collection">
+      <div class="collection-inner">
+        <div class="collection-heading reveal"><div><h2 id="collection-title">Find your place to stay.</h2><p>Explore the Coastal Getaway collection, then choose your property to see its details or check availability.</p></div></div>
+        <div class="collection-toolbar" data-collection-filters aria-label="Filter properties">
+          <div class="collection-categories" role="group" aria-label="Property type">
+            <button type="button" class="collection-filter is-active" data-category="all" aria-pressed="true">All Properties</button>
+            <button type="button" class="collection-filter" data-category="beach" aria-pressed="false">Beach Hotels</button>
+            <button type="button" class="collection-filter" data-category="suites" aria-pressed="false">Coastal Suites</button>
+            <button type="button" class="collection-filter" data-category="mountain" aria-pressed="false">Mountain Escapes</button>
+          </div>
+          <label class="collection-location-label">Location <select data-location aria-label="Filter by location"><option value="all">All locations</option><option value="FL">Florida</option><option value="NC">North Carolina</option><option value="CA">California</option></select></label>
+        </div>
+        <div class="collection-meta"><p data-result-count role="status" aria-live="polite">Showing 9 properties</p><button type="button" data-clear-filters hidden>Clear filters</button></div>
+        <div class="collection-grid" data-property-grid>
+          <article class="collection-card reveal" data-categories="mountain" data-location="NC">
+            <a class="collection-card-image" href="../property/the-pineola-newland-nc/"><img src="../assets/property-image-not-found-1.png" alt="Aerial view of The Pineola in Newland" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">Newland, North Carolina</p><h3><a href="../property/the-pineola-newland-nc/">The Pineola</a></h3><p>Mountain grounds with lodge stays, cabins, an onsite taproom, and room to spend time outdoors.</p><div class="collection-card-actions"><a class="button" href="../property/the-pineola-newland-nc/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/Cobncr">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal reveal-delay" data-categories="mountain" data-location="NC">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/hickory-falls-inn/"><img src="https://irp.cdn-website.com/f01915a1/dms3rep/multi/opt/HFIL11-1920w.JPG" alt="Guest lounge at Hickory Falls Inn" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">Chimney Rock, North Carolina</p><h3><a href="https://coastalgetaway.com/property/hickory-falls-inn/">Hickory Falls Inn</a></h3><p>A boutique mountain inn near Chimney Rock Village and Hickory Nut Falls.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/hickory-falls-inn/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/q7fFmV">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal" data-categories="beach suites" data-location="NC">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/coastal-suites/"><img src="../assets/property-image-not-found.jpeg" alt="Coastal Suites hotel in Wilmington" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">Wilmington, North Carolina</p><h3><a href="https://coastalgetaway.com/property/coastal-suites/">Coastal Suites</a></h3><p>Comfortable, affordable accommodations near Wilmington's downtown and coastal attractions.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/coastal-suites/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/hVAbiq">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal reveal-delay" data-categories="mountain" data-location="NC">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/geneva-riverside-hotel-tiki/"><img src="../assets/property-image-not-found-3.jpg" alt="Mountain setting at Geneva Riverside Hotel and Tiki Bar" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">Lake Lure, North Carolina</p><h3><a href="https://coastalgetaway.com/property/geneva-riverside-hotel-tiki/">Geneva Hotel &amp; Tiki Bar</a></h3><p>A riverside Lake Lure stay with an outdoor pool and onsite tiki bar and grill.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/geneva-riverside-hotel-tiki/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/xXvezo">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal" data-categories="mountain" data-location="CA">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/bluebird-day-inn/"><img src="https://images.squarespace-cdn.com/content/v1/65f8e17a8adb75356846dba7/b13e53a5-2bd9-4aaf-8e0d-b786b859c637/_A7R9521.jpg" alt="Guest room at Bluebird Day Inn and Suites" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">South Lake Tahoe, California</p><h3><a href="https://coastalgetaway.com/property/bluebird-day-inn/">Bluebird Day Inn &amp; Suites</a></h3><p>A South Lake Tahoe base near local beaches and Heavenly Mountain.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/bluebird-day-inn/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/mWqHnP">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal reveal-delay" data-categories="beach" data-location="CA">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/patriots-boutique-motel/"><img src="../assets/property-image-not-found-1.jpg" alt="Exterior of Patriots Boutique Motel" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">San Clemente, California</p><h3><a href="https://coastalgetaway.com/property/patriots-boutique-motel/">Patriots’ Boutique Motel</a></h3><p>A boutique motel in San Clemente for an easy Southern California coastal stay.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/patriots-boutique-motel/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/onETkp">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal" data-categories="beach suites" data-location="FL">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/sea-shells-beach-club/"><img src="../assets/category-image-not-found.jpg" alt="Ocean view from Sea Shells Beach Club" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">Daytona Beach, Florida</p><h3><a href="https://coastalgetaway.com/property/sea-shells-beach-club/">Sea Shells Beach Club</a></h3><p>Oceanfront studios and suites on Daytona Beach for short and extended stays.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/sea-shells-beach-club/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/cJt1yj">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal reveal-delay" data-categories="beach suites" data-location="FL">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/malibu-resort/"><img src="../assets/property-image-not-found-4.jpg" alt="Malibu Resort Motel in North Redington Beach" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">North Redington Beach, Florida</p><h3><a href="https://coastalgetaway.com/property/malibu-resort/">Malibu Resort Motel</a></h3><p>A relaxed beach motel with a heated pool, close to the Gulf and local dining.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/malibu-resort/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/ivsspZ">Check Availability</a></div></div>
+          </article>
+          <article class="collection-card reveal" data-categories="beach" data-location="FL">
+            <a class="collection-card-image" href="https://coastalgetaway.com/property/blind-pass-resort/"><img src="../assets/property-image-not-found-5.jpg" alt="Blind Pass Resort exterior in St. Pete Beach" loading="lazy" /></a>
+            <div class="collection-card-content"><p class="collection-card-location">St. Pete Beach, Florida</p><h3><a href="https://coastalgetaway.com/property/blind-pass-resort/">Blind Pass Resort</a></h3><p>A boutique motel with a tropical courtyard and pool near St. Pete Beach.</p><div class="collection-card-actions"><a class="button" href="https://coastalgetaway.com/property/blind-pass-resort/">View Property</a><a class="collection-book-link" href="https://hotels.cloudbeds.com/reservation/TorgMC">Check Availability</a></div></div>
+          </article>
+        </div>
+        <div class="collection-empty" data-empty-state hidden><h3>No properties found</h3><p>Try another location or explore the full collection.</p><button type="button" class="button" data-empty-reset>Show All Properties</button></div>
+      </div>
+    </section>
+    <section class="collection-help section"><div class="collection-help-inner reveal"><div><h2>Need help finding the right stay?</h2><p>Our reservations team can help you compare properties and plan your getaway.</p></div><a class="button" href="tel:18773500053">Call 877.350.0053</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="../index.html"><img src="../assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a><div class="footer-column"><p class="footer-label">Explore</p><a href="./">Our Getaways</a><a href="../index.html#properties">Featured Properties</a><a href="../about.html">About Coastal Getaway</a><a href="../about.html#contact">Contact</a></div><div class="footer-column"><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a><span>Our team can help you find the right stay.</span></div><div class="footer-social"><p class="footer-label">Follow the journey</p><div><a href="https://www.facebook.com/coastalgetawayvacations" aria-label="Facebook">f</a><a href="https://www.instagram.com/coastalgetawayvacations/" aria-label="Instagram">◎</a></div></div></div><div class="footer-family"><span>Coastal stays for every kind of escape.</span><a href="?category=beach">Beach Hotels</a><a href="?category=suites">Coastal Suites</a><a href="?category=mountain">Mountain Escapes</a></div><div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations. All rights reserved.</span><span>1014 North Atlantic Avenue, Daytona Beach, FL 32118</span></div></footer>
+  <script src="../script.js"></script>
+</body>
+</html>
