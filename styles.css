@@ -105,3 +105,66 @@ h1,h2,.hero h1,.about-hero h1,.intro h2,.section-heading h2,.story-copy h2,.revi
 .contact-form-note{margin:-8px 0 0;color:#424242;font-size:13px;line-height:1.5}
 @media(max-width:900px){.about-contact-inner{grid-template-columns:1fr;gap:32px}}
 @media(max-width:560px){.about-contact h2{font-size:clamp(33px,8.5vw,40px)}.contact-field-row{grid-template-columns:1fr;gap:22px}.about-contact-copy>p:last-child{font-size:16px}}
+/* Pineola single-property template */
+.pineola-hero{position:relative;display:flex;align-items:flex-end;min-height:720px;height:min(90vh,880px);overflow:hidden;color:#fff}
+.pineola-hero-image,.pineola-hero-shade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pineola-hero-image{object-position:center 53%}
+.pineola-hero-shade{background:linear-gradient(90deg,rgba(10,36,59,.77),rgba(10,36,59,.08) 80%),linear-gradient(0deg,rgba(10,36,59,.42),transparent 60%)}
+.pineola-hero-content{position:relative;z-index:1;width:min(1240px,calc(100% - 12vw));margin:0 auto 112px}
+.pineola-location{margin:0 0 20px;text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:600}
+.pineola-hero h1{margin:0;font:400 clamp(62px,7vw,96px)/1.08 var(--serif);letter-spacing:-.025em}
+.pineola-hero-content>p:not(.pineola-location){max-width:620px;margin:20px 0 30px;font-size:20px;line-height:1.55}
+.pineola-intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(55px,8vw,135px);max-width:1360px;margin:auto}
+.pineola-intro h2,.pineola-section-intro h2,.pineola-experience h2,.pineola-area h2,.pineola-details h2,.pineola-final-cta h2{margin:0;font:400 clamp(36px,3.7vw,52px)/1.17 var(--serif);letter-spacing:-.02em}
+.pineola-intro-copy p,.pineola-experience-copy>p:not(.about-kicker),.pineola-area-inner p:not(.about-kicker){margin:0 0 24px;font-size:17px;line-height:1.75}
+.pineola-inline-link,.pineola-detail-grid a{display:inline-flex;gap:12px;align-items:center;border-bottom:1px solid var(--brand-blue);padding-bottom:6px;color:var(--brand-blue);font-size:14px;font-weight:600;transition:color .25s,border-color .25s}
+.pineola-inline-link:hover,.pineola-detail-grid a:hover{color:var(--brand-blue-dark);border-color:var(--brand-blue-dark)}
+.pineola-gallery{position:relative;display:grid;grid-template-columns:1.45fr .8fr .8fr;gap:12px;max-width:1240px;margin:0 auto;min-height:470px}
+.pineola-gallery-photo{display:block;min-width:0;border:0;padding:0;overflow:hidden;background:#e8ecec;cursor:pointer}
+.pineola-gallery-photo img{width:100%;height:100%;min-height:470px;object-fit:cover;transition:transform .65s ease}
+.pineola-gallery-photo:hover img{transform:scale(1.04)}
+.pineola-gallery-view{position:absolute;right:22px;bottom:22px;border:1px solid #fff;border-radius:3px;background:rgba(10,36,59,.72);color:#fff;padding:14px 20px;font:600 14px var(--sans);cursor:pointer}
+.pineola-gallery-view:hover{background:var(--brand-blue)}
+.pineola-stays{background:#f7f7f5}
+.pineola-section-intro{text-align:center;max-width:800px;margin:0 auto 50px}
+.pineola-section-intro p{font-size:17px;line-height:1.65;margin:18px auto 0;max-width:630px}
+.pineola-stay-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:1240px;margin:auto}
+.pineola-stay-card{background:#fff;display:flex;flex-direction:column}
+.pineola-stay-card img{width:100%;height:290px;object-fit:cover}
+.pineola-stay-card>div{padding:29px 28px 32px;display:flex;flex:1;flex-direction:column;align-items:flex-start}
+.pineola-stay-card h3{margin:0;font:400 28px/1.2 var(--serif)}
+.pineola-stay-card p{font-size:15px;line-height:1.65;min-height:50px;margin:15px 0 26px}
+.pineola-stay-card .button{margin-top:auto}
+.pineola-stay-note{max-width:1240px;margin:26px auto 0;text-align:center;color:#565656;font-size:13px;line-height:1.6}
+.pineola-experience{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,8vw,125px);align-items:center}
+.pineola-experience-photo img{height:580px;object-fit:cover}
+.pineola-experience-copy{max-width:570px}
+.pineola-experience-copy>p:not(.about-kicker){margin:26px 0 25px}
+.pineola-area{background:#eff4f7}
+.pineola-area-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,8vw,120px);align-items:center;max-width:1240px;margin:auto}
+.pineola-area-inner>div{max-width:560px}
+.pineola-area-inner p:not(.about-kicker){margin:24px 0 28px}
+.pineola-area-inner img{height:480px;object-fit:cover}
+.pineola-details{max-width:1360px;margin:auto}
+.pineola-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1240px;margin:auto}
+.pineola-detail-grid>div{border-top:1px solid #bbc9d2;padding-top:25px}
+.pineola-detail-grid h3{margin:0 0 15px;font:400 25px/1.3 var(--serif)}
+.pineola-detail-grid p{min-height:85px;margin:0 0 16px;font-size:15px;line-height:1.65}
+.pineola-final-cta{position:relative;display:grid;place-items:center;min-height:490px;overflow:hidden;color:#fff;text-align:center}
+.pineola-final-cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.48)}
+.pineola-final-cta>div{position:relative;padding:60px 20px}
+.pineola-final-cta p{font-size:12px;font-weight:600;letter-spacing:.16em}
+.pineola-final-cta h2{color:#fff;margin:16px 0 30px}
+.pineola-lightbox{position:fixed;z-index:100;width:min(1150px,calc(100% - 32px));max-height:calc(100dvh - 32px);border:0;border-radius:4px;background:#102b40;color:#fff;padding:56px 60px 24px}
+.pineola-lightbox::backdrop{background:rgba(5,20,33,.88)}
+.pineola-lightbox[open]{display:flex;align-items:center;gap:16px}
+.pineola-lightbox figure{flex:1;min-width:0;margin:0;text-align:center}
+.pineola-lightbox figure img{width:100%;max-height:calc(100dvh - 140px);object-fit:contain}
+.pineola-lightbox figcaption{margin-top:9px;font-size:13px}
+.pineola-lightbox button{border:1px solid #fff;background:transparent;color:#fff;cursor:pointer}
+.pineola-lightbox-arrow{flex:none;width:45px;height:45px;border-radius:50%;font-size:21px}
+.pineola-lightbox-close{position:absolute;top:12px;right:16px;width:38px;height:38px;border-radius:50%;font-size:26px}
+.pineola-lightbox button:hover{background:var(--brand-blue)}
+@media(max-width:900px){.pineola-hero{min-height:650px}.pineola-intro,.pineola-experience,.pineola-area-inner{grid-template-columns:1fr}.pineola-gallery{margin:0 32px;grid-template-columns:1.4fr 1fr}.pineola-gallery-photo:last-of-type{display:none}.pineola-stay-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pineola-detail-grid{grid-template-columns:1fr 1fr}.pineola-experience-photo img{height:460px}}
+@media(max-width:560px){.pineola-hero{min-height:620px;height:auto}.pineola-hero-content{width:calc(100% - 40px);margin:170px auto 70px}.pineola-hero h1{font-size:clamp(52px,13vw,68px)}.pineola-hero-content>p:not(.pineola-location){font-size:17px}.pineola-intro h2,.pineola-section-intro h2,.pineola-experience h2,.pineola-area h2,.pineola-details h2,.pineola-final-cta h2{font-size:clamp(33px,8.5vw,40px)}.pineola-gallery{margin:0 20px;display:block;min-height:350px}.pineola-gallery-photo:not(.pineola-gallery-main){display:none}.pineola-gallery-photo img{height:350px;min-height:0}.pineola-stay-grid,.pineola-detail-grid{grid-template-columns:1fr}.pineola-stay-card img{height:280px}.pineola-experience-photo img,.pineola-area-inner img{height:350px}.pineola-lightbox{padding:54px 8px 18px;gap:4px}.pineola-lightbox-arrow{width:32px;height:38px;font-size:17px}.pineola-lightbox figure img{max-height:calc(100dvh - 125px)}}
+@media(prefers-reduced-motion:reduce){.pineola-gallery-photo img{transition:none}}
