@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
-const hero = document.querySelector('.hero, .about-hero, .pineola-hero, .listing-hero');
+const hero = document.querySelector('.hero, .about-hero, .pineola-hero, .listing-hero, .getaways-hero');
 let reviewIndex = 0;
 
 const updateHeader = () => {
@@ -121,3 +121,63 @@ galleryDialog?.addEventListener('keydown', event => {
   if (event.key === 'ArrowLeft') showGalleryPhoto(galleryIndex - 1);
   if (event.key === 'ArrowRight') showGalleryPhoto(galleryIndex + 1);
 });
+
+
+// Filter the Coastal property collection without changing any booking links.
+const collectionFilters = document.querySelector('[data-collection-filters]');
+if (collectionFilters) {
+  const cards = [...document.querySelectorAll('[data-property-grid] .collection-card')];
+  const categories = [...collectionFilters.querySelectorAll('[data-category]')];
+  const locationSelect = collectionFilters.querySelector('[data-location]');
+  const count = document.querySelector('[data-result-count]');
+  const clearButton = document.querySelector('[data-clear-filters]');
+  const empty = document.querySelector('[data-empty-state]');
+  const validCategories = new Set(categories.map(button => button.dataset.category));
+  const validLocations = new Set([...locationSelect.options].map(option => option.value));
+  let category = 'all';
+  let location = 'all';
+  const renderCollection = () => {
+    let visible = 0;
+    cards.forEach(card => {
+      const matchesCategory = category === 'all' || card.dataset.categories.split(' ').includes(category);
+      const matchesLocation = location === 'all' || card.dataset.location === location;
+      card.hidden = !(matchesCategory && matchesLocation);
+      if (!card.hidden) visible++;
+    });
+    categories.forEach(button => {
+      const active = button.dataset.category === category;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    locationSelect.value = location;
+    count.textContent = `Showing ${visible} ${visible === 1 ? 'property' : 'properties'}`;
+    empty.hidden = visible !== 0;
+    clearButton.hidden = category === 'all' && location === 'all';
+  };
+  const readCollectionURL = () => {
+    const params = new URLSearchParams(window.location.search);
+    category = validCategories.has(params.get('category')) ? params.get('category') : 'all';
+    location = validLocations.has(params.get('location')) ? params.get('location') : 'all';
+    renderCollection();
+  };
+  const writeCollectionURL = () => {
+    const url = new URL(window.location.href);
+    if (category === 'all') url.searchParams.delete('category');
+    else url.searchParams.set('category', category);
+    if (location === 'all') url.searchParams.delete('location');
+    else url.searchParams.set('location', location);
+    window.history.pushState(null, '', url);
+    renderCollection();
+  };
+  categories.forEach(button => button.addEventListener('click', () => {
+    if (category === button.dataset.category) return;
+    category = button.dataset.category;
+    writeCollectionURL();
+  }));
+  locationSelect.addEventListener('change', () => { location = locationSelect.value; writeCollectionURL(); });
+  const resetCollection = () => { category = 'all'; location = 'all'; writeCollectionURL(); };
+  clearButton.addEventListener('click', resetCollection);
+  document.querySelector('[data-empty-reset]').addEventListener('click', resetCollection);
+  window.addEventListener('popstate', readCollectionURL);
+  readCollectionURL();
+}
