@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
-const hero = document.querySelector('.hero, .about-hero');
+const hero = document.querySelector('.hero, .about-hero, .pineola-hero');
 let reviewIndex = 0;
 
 const updateHeader = () => {
@@ -98,3 +98,26 @@ document.querySelector('[data-review-next]')?.addEventListener('click', () => sh
 if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   setInterval(() => showReview(reviewIndex + 1), 6500);
 }
+
+const galleryDialog = document.querySelector('[data-gallery-dialog]');
+const galleryPhotos = [...document.querySelectorAll('.pineola-gallery-photo img')];
+let galleryIndex = 0;
+const showGalleryPhoto = index => {
+  if (!galleryPhotos.length || !galleryDialog) return;
+  galleryIndex = (index + galleryPhotos.length) % galleryPhotos.length;
+  galleryDialog.querySelector('[data-gallery-image]').src = galleryPhotos[galleryIndex].src;
+  galleryDialog.querySelector('[data-gallery-image]').alt = galleryPhotos[galleryIndex].alt;
+  galleryDialog.querySelector('[data-gallery-caption]').textContent = `${galleryIndex + 1} / ${galleryPhotos.length}`;
+};
+document.querySelectorAll('[data-gallery-open]').forEach(button => button.addEventListener('click', () => {
+  showGalleryPhoto(Number(button.dataset.galleryOpen));
+  galleryDialog.showModal();
+}));
+document.querySelector('[data-gallery-prev]')?.addEventListener('click', () => showGalleryPhoto(galleryIndex - 1));
+document.querySelector('[data-gallery-next]')?.addEventListener('click', () => showGalleryPhoto(galleryIndex + 1));
+document.querySelector('[data-gallery-close]')?.addEventListener('click', () => galleryDialog.close());
+galleryDialog?.addEventListener('click', event => { if (event.target === galleryDialog) galleryDialog.close(); });
+galleryDialog?.addEventListener('keydown', event => {
+  if (event.key === 'ArrowLeft') showGalleryPhoto(galleryIndex - 1);
+  if (event.key === 'ArrowRight') showGalleryPhoto(galleryIndex + 1);
+});
