@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
-const hero = document.querySelector('.hero, .about-hero, .pineola-hero');
+const hero = document.querySelector('.hero, .about-hero, .pineola-hero, .listing-hero');
 let reviewIndex = 0;
 
 const updateHeader = () => {
