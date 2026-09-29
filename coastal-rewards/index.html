@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="terms.css" />
 </head>
 <body class="rewards-page">
   <header class="site-header" data-header>
@@ -129,6 +130,7 @@
             <label>Phone number<input name="your-phone" type="tel" autocomplete="tel" inputmode="tel" required /><small class="field-error" aria-live="polite"></small></label>
             <label>Email address<input name="your-email" type="email" autocomplete="email" required /><small class="field-error" aria-live="polite"></small></label>
             <label class="rewards-consent"><input name="your-consent" type="checkbox" required /><span>I agree to receive Coastal Rewards emails and member offers. You can unsubscribe anytime.</span><small class="field-error" aria-live="polite"></small></label>
+            <button class="rewards-terms-link" type="button" data-terms-open aria-haspopup="dialog" aria-controls="rewards-terms">Read Terms &amp; Conditions</button>
             <button class="button" type="submit">Join Coastal Rewards</button>
           </form>
           <div class="rewards-success" data-rewards-success hidden tabindex="-1">
@@ -171,6 +173,19 @@
   </main>
 
   <footer class="site-footer"><div class="footer-top"><a class="brand footer-brand" href="../index.html"><img src="../assets/coastal-getaway-logo.png" alt="Coastal Getaway" /></a><div class="footer-column"><p class="footer-label">Explore</p><a href="../getaways/">Our Getaways</a><a href="./">Coastal Rewards</a><a href="../index.html#properties">Featured Properties</a><a href="../about.html">About Coastal Getaway</a><a href="../about.html#contact">Contact</a></div><div class="footer-column"><p class="footer-label">Reservations</p><a href="tel:18773500053">877.350.0053</a><a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a><span>Our team can help you find the right stay.</span></div><div class="footer-social"><p class="footer-label">Follow the journey</p><div><a href="https://www.facebook.com/coastalgetawayvacations" aria-label="Facebook">f</a><a href="https://www.instagram.com/coastalgetawayvacations/" aria-label="Instagram">◎</a></div></div></div><div class="footer-family"><span>Coastal stays for every kind of escape.</span><a href="../getaways/?category=beach">Beach Hotels</a><a href="../getaways/?category=suites">Coastal Suites</a><a href="../getaways/?category=mountain">Mountain Escapes</a></div><div class="footer-bottom"><span>© 2026 Coastal Getaway Vacations. All rights reserved.</span><span>1014 North Atlantic Avenue, Daytona Beach, FL 32118</span></div></footer>
+  <dialog id="rewards-terms" class="rewards-terms-dialog" aria-labelledby="rewards-terms-title">
+    <div class="rewards-terms-header">
+      <h2 id="rewards-terms-title">Coastal Rewards<br />Terms &amp; Conditions</h2>
+      <button type="button" class="rewards-terms-close" data-terms-close aria-label="Close terms and conditions" autofocus>×</button>
+    </div>
+    <div class="rewards-terms-body" tabindex="0" aria-label="Terms content">
+      <!-- Replace this pending notice with Jed's supplied, approved terms. -->
+      <p class="rewards-terms-pending">Terms &amp; Conditions are awaiting confirmation.</p>
+      <p>The full program terms will be published here once provided by Coastal Getaway. For questions, please contact <a href="mailto:info@coastalgetaway.com">info@coastalgetaway.com</a>.</p>
+    </div>
+    <div class="rewards-terms-footer"><button class="button" type="button" data-terms-close>Close</button></div>
+  </dialog>
   <script src="../script.js"></script>
+  <script src="terms.js"></script>
 </body>
 </html>
