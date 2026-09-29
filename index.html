@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="home-rewards.css" />
 </head>
 <body>
   <header class="site-header" data-header>
@@ -82,18 +83,32 @@
       </div>
     </section>
 
-    <section class="rewards-band" id="rewards" aria-labelledby="rewards-band-title">
+    <section class="rewards-band home-rewards" id="rewards" aria-labelledby="rewards-band-title">
       <div class="rewards-band-inner">
-        <div class="rewards-band-copy reveal"><p class="about-kicker">Coastal Rewards</p><h2 id="rewards-band-title">Join free. <br />Save 10% today.</h2><p>Members get a better rate at every property, plus early check-in, late checkout and upgrades when available.</p><a href="coastal-rewards/">See all member benefits</a></div>
-        <div class="reveal reveal-delay">
-          <form class="rewards-form" data-rewards-form data-location="homepage" novalidate>
-            <label>Full name<input name="your-name" type="text" autocomplete="name" required /><small class="field-error" aria-live="polite"></small></label>
-            <label>Phone number<input name="your-phone" type="tel" autocomplete="tel" inputmode="tel" required /><small class="field-error" aria-live="polite"></small></label>
-            <label class="full">Email address<input name="your-email" type="email" autocomplete="email" required /><small class="field-error" aria-live="polite"></small></label>
+        <div class="rewards-band-copy">
+          <p class="about-kicker">Coastal Rewards</p>
+          <h2 id="rewards-band-title">Your next getaway.<br />With more rewards.</h2>
+          <p>Join free and save 10% on your stay. Enjoy member rates across the Coastal Getaway collection, with a little extra along the way.</p>
+          <ul class="home-rewards-benefits">
+            <li>10% off when you join</li>
+            <li>Early check-in, late checkout &amp; room upgrades when available</li>
+            <li>More savings as you stay: 15% after 10 stays, 20% after 20</li>
+          </ul>
+          <a class="button home-rewards-benefits-button" href="coastal-rewards/">Explore All Benefits</a>
+        </div>
+        <div class="home-rewards-card">
+          <h3>Join Coastal Rewards</h3>
+          <p class="home-rewards-intro">Free to join. More to look forward to.</p>
+          <form class="rewards-form" data-rewards-form data-location="homepage" aria-describedby="home-rewards-preview" novalidate>
+            <label>Full name<input name="your-name" type="text" autocomplete="name" placeholder="Your full name" required /><small class="field-error" aria-live="polite"></small></label>
+            <label>Phone number<input name="your-phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Your phone number" required /><small class="field-error" aria-live="polite"></small></label>
+            <label class="full">Email address<input name="your-email" type="email" autocomplete="email" placeholder="you@example.com" required /><small class="field-error" aria-live="polite"></small></label>
             <label class="rewards-consent full"><input name="your-consent" type="checkbox" required /><span>I agree to receive Coastal Rewards emails and member offers.</span><small class="field-error" aria-live="polite"></small></label>
+            <a class="home-rewards-terms full" href="coastal-rewards/#join">Read program details &amp; Terms and Conditions</a>
             <button class="button full" type="submit">Join Coastal Rewards</button>
           </form>
-          <div class="rewards-success" data-rewards-success hidden tabindex="-1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m7.5 12.5 3 3 6-6.5"/></svg><h3>You're in.</h3><p>Check your inbox for your member code, then use it when you book.</p><a class="button" href="#booking">Book with your code</a></div>
+          <div class="rewards-success" data-rewards-success hidden tabindex="-1" role="status"><h3>Signup preview complete</h3><p>This preview has not saved your details or sent a promo code. Email delivery will be connected in WordPress.</p><a class="button" href="coastal-rewards/">Explore Coastal Rewards</a></div>
+          <p class="home-rewards-preview" id="home-rewards-preview">Design preview: signup and promo-code emails are not yet active.</p>
         </div>
       </div>
     </section>

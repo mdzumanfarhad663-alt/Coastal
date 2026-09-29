@@ -1,0 +1,26 @@
+/* Homepage-only Coastal Rewards section. */
+.home-rewards{padding:96px max(24px,6vw);background:#eef6fc;color:#000;font-family:var(--sans)}
+.home-rewards .rewards-band-inner{max-width:1240px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+.home-rewards .about-kicker{color:#1B6DB0;font-size:12px;letter-spacing:.14em;margin:0 0 20px}
+.home-rewards h2{color:#000;font:400 48px/1.17 var(--serif);letter-spacing:-.02em;margin:0;max-width:560px}
+.home-rewards .rewards-band-copy>p:not(.about-kicker){color:#000;font-size:16px;line-height:1.75;max-width:490px;margin:24px 0}
+.home-rewards-benefits{list-style:none;padding:0;margin:0 0 30px;max-width:480px}
+.home-rewards-benefits li{position:relative;padding:0 0 0 20px;margin:0 0 14px;font-size:15px;line-height:1.65}
+.home-rewards-benefits li:before{content:"";position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:#1B6DB0}
+.home-rewards .rewards-band-copy .home-rewards-benefits-button{display:inline-flex;margin:0;padding:16px 28px;border:0;border-radius:4px;background:#1B6DB0;color:#fff;font:600 15px/1.4 var(--sans);text-decoration:none}
+.home-rewards .rewards-band-copy .home-rewards-benefits-button:hover{background:#165990;filter:none}
+.home-rewards .home-rewards-card{padding:36px;background:#fff;border:1px solid #dce8f0;border-radius:8px;box-shadow:0 12px 40px rgba(27,109,176,.06)}
+.home-rewards-card>h3{margin:0 0 8px;color:#000;font:400 28px/1.25 var(--serif)}
+.home-rewards-intro{margin:0 0 28px;font-size:14px;line-height:1.6;color:#454543}
+.home-rewards .rewards-form{gap:16px 18px}
+.home-rewards .rewards-form label{color:#000;font-size:13px}
+.home-rewards .rewards-form input:not([type=checkbox]){min-height:52px;color:#000;font-size:16px}
+.home-rewards .rewards-consent{font-size:12px;line-height:1.65;font-weight:400}
+.home-rewards-terms{font-size:12px;line-height:1.5;color:#1B6DB0;text-decoration:underline;text-underline-offset:3px}
+.home-rewards .rewards-form>.button{min-height:52px;margin:0;font:600 15px/1.4 var(--sans)}
+.home-rewards-preview{margin:18px 0 0;color:#666;font-size:11px;line-height:1.6}
+.home-rewards [hidden]{display:none!important}
+.home-rewards .rewards-success h3{color:#000}
+@media(max-width:1000px){.home-rewards .rewards-band-inner{gap:36px}.home-rewards h2{font-size:40px}.home-rewards .home-rewards-card{padding:28px}}
+@media(max-width:800px){.home-rewards{padding:72px 24px}.home-rewards .rewards-band-inner{grid-template-columns:1fr;max-width:620px;gap:36px}.home-rewards h2{font-size:40px}}
+@media(max-width:560px){.home-rewards{padding:64px 20px}.home-rewards h2{font-size:34px}.home-rewards h2 br{display:none}.home-rewards .home-rewards-card{padding:24px 20px}.home-rewards-card>h3{font-size:25px}.home-rewards .rewards-form{grid-template-columns:1fr}.home-rewards .rewards-band-copy .home-rewards-benefits-button{width:100%}}
