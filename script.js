@@ -3,7 +3,7 @@ const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
 const reviewTrack = document.querySelector('[data-review-track]');
 const reviewSlides = reviewTrack ? [...reviewTrack.children] : [];
-const hero = document.querySelector('.hero, .about-hero, .pineola-hero, .listing-hero, .getaways-hero');
+const hero = document.querySelector('.hero, .about-hero, .pineola-hero, .listing-hero, .getaways-hero, .rewards-hero');
 let reviewIndex = 0;
 
 const updateHeader = () => {
@@ -181,3 +181,48 @@ if (collectionFilters) {
   window.addEventListener('popstate', readCollectionURL);
   readCollectionURL();
 }
+
+// Coastal Rewards signup (front-end preview; Contact Form 7 replaces this in WordPress).
+document.querySelectorAll('[data-rewards-form]').forEach(form => {
+  const messages = {
+    'your-name': 'Please enter your name.',
+    'your-phone': 'Please enter a phone number.',
+    'your-email': 'Please enter a valid email address.',
+    'your-consent': 'Please agree to receive member emails.'
+  };
+  const check = input => {
+    const error = input.closest('label').querySelector('.field-error');
+    let valid = input.type === 'checkbox' ? input.checked : input.value.trim() !== '';
+    if (valid && input.type === 'email') valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(input.value.trim());
+    if (valid && input.type === 'tel') valid = input.value.replace(/\D/g, '').length >= 7;
+    input.classList.toggle('is-invalid', !valid);
+    input.setAttribute('aria-invalid', String(!valid));
+    if (error) error.textContent = valid ? '' : messages[input.name];
+    return valid;
+  };
+  form.querySelectorAll('input').forEach(input => input.addEventListener(input.type === 'checkbox' ? 'change' : 'blur', () => {
+    if (input.classList.contains('is-invalid') || input.value) check(input);
+  }));
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const fields = [...form.querySelectorAll('input')];
+    const results = fields.map(check);
+    const firstBad = fields[results.indexOf(false)];
+    if (firstBad) { firstBad.focus(); return; }
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'rewards_signup', form_location: form.dataset.location || 'rewards_page' });
+    } catch (_) { /* Signup still completes without analytics. */ }
+    const success = form.parentElement.querySelector('[data-rewards-success]');
+    form.hidden = true;
+    if (success) { success.hidden = false; success.focus(); }
+  });
+});
+
+// FAQ accordion
+document.querySelectorAll('[data-faq] .faq-item button').forEach(button => button.addEventListener('click', () => {
+  const panel = button.closest('.faq-item').querySelector('.faq-panel');
+  const open = button.getAttribute('aria-expanded') === 'true';
+  button.setAttribute('aria-expanded', String(!open));
+  panel.hidden = open;
+}));

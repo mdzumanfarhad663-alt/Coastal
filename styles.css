@@ -194,3 +194,95 @@ h1,h2,.hero h1,.about-hero h1,.intro h2,.section-heading h2,.story-copy h2,.revi
 @media(max-width:900px){.getaways-page .section{padding:78px 32px}.collection-toolbar{align-items:flex-start;flex-direction:column;gap:17px}.collection-card-image{aspect-ratio:1.25}.collection-card-content{padding:24px}.collection-grid{gap:24px 18px}.collection-help-inner{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.getaways-page .getaways-hero{min-height:460px;height:auto}.getaways-hero-inner{width:calc(100% - 40px);margin:155px auto 60px}.getaways-hero h1{font-size:clamp(42px,10vw,54px)}.getaways-hero p{font-size:16px}.getaways-page .section{padding:64px 20px}.collection-heading h2,.collection-help h2{font-size:clamp(33px,8.5vw,40px)}.collection-heading p,.collection-help p{font-size:16px}.collection-categories{flex-wrap:nowrap;max-width:100%;overflow-x:auto;scrollbar-width:none;padding-bottom:3px}.collection-categories::-webkit-scrollbar{display:none}.collection-filter{flex:none}.collection-location-label{width:100%;justify-content:space-between}.collection-location-label select{flex:1;max-width:230px}.collection-grid{grid-template-columns:1fr;gap:20px}.collection-card-image{aspect-ratio:1.35}.collection-card-content{padding:23px}.collection-card-actions{width:100%}.collection-card-actions .button{flex:1}.collection-help .button{width:100%}}
 @media(prefers-reduced-motion:reduce){.collection-card-image img{transition:none}}
+
+/* Coastal Rewards page + homepage rewards band */
+.rewards-page{color:#454543}.rewards-page .site-nav [aria-current=page]{color:#ffe0a7}
+.rewards-page h2,.rewards-band h2{margin:0;color:#153C62;font:400 clamp(32px,3.6vw,40px)/1.2 var(--serif);letter-spacing:-.01em}
+.rewards-page h3{color:#153C62}
+.rewards-page .about-kicker,.rewards-band .about-kicker{margin:0 0 15px;color:#1B6DB0;font:700 12px/1.4 var(--sans);letter-spacing:1.7px;text-transform:uppercase}
+.rewards-page .section{padding:104px max(32px,6vw)}
+.rewards-inner{max-width:1240px;margin:auto}
+.rewards-heading{max-width:720px;margin:0 auto 52px;text-align:center}.rewards-heading>p:last-child:not(.about-kicker){margin:24px 0 0;font-size:17px;line-height:1.7}
+/* hero */
+.rewards-hero{position:relative;display:flex;align-items:flex-end;height:550px;overflow:hidden;color:#fff}
+.rewards-hero>img,.rewards-hero-shade{position:absolute;inset:0;width:100%;height:100%}.rewards-hero>img{object-fit:cover;object-position:center 55%}
+.rewards-hero-shade{background:linear-gradient(90deg,rgba(8,37,61,.8),rgba(8,37,61,.2) 78%),linear-gradient(0deg,rgba(8,37,61,.42),transparent 55%)}
+.rewards-hero-inner{position:relative;width:min(1240px,calc(100% - 12vw));margin:0 auto 80px}
+.rewards-hero .about-kicker{color:#ffdba4}
+.rewards-hero h1{max-width:760px;margin:0 0 24px;color:#fff;font:400 56px/1.12 var(--serif);letter-spacing:-.01em}
+.rewards-hero-inner>p:not(.about-kicker){max-width:520px;margin:0;font-size:18px;line-height:1.6}
+.rewards-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:32px}
+.rewards-hero-link{border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:3px;font-weight:600;font-size:15px}.rewards-hero-link:hover{color:#ffdba4;border-color:#ffdba4}
+/* tiers */
+.rewards-tiers{background:#fff}
+.tier-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.tier-card{position:relative;margin:0;padding:40px 34px 36px;background:#f7f7f5;border:1px solid #e8e5df;border-radius:4px;text-align:center}
+.tier-card p{margin:0}
+.tier-name{color:#1B6DB0;font:700 12px/1.4 var(--sans);letter-spacing:1.7px;text-transform:uppercase}
+.tier-rate{margin:14px 0 4px!important;color:#153C62;font:400 76px/1 var(--serif)}.tier-rate span{font-size:.5em;vertical-align:.55em;margin-left:2px}
+.tier-rule{color:#153C62;font-size:17px;font-weight:600}
+.tier-note{margin-top:18px!important;padding-top:18px;border-top:1px solid #e3e0d9;font-size:15px;line-height:1.65}
+.tier-card-featured{background:#153C62;border-color:#153C62;color:#dfe8f0;transform:translateY(-10px)}
+.tier-card-featured .tier-name{color:#ffdba4}.tier-card-featured .tier-rate,.tier-card-featured .tier-rule{color:#fff}.tier-card-featured .tier-note{border-color:rgba(255,255,255,.18)}
+.tier-card-featured.reveal.visible{transform:translateY(-10px)}
+/* perks */
+.rewards-perks{background:#eff4f7}
+.perk-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.perk{padding:32px 28px;background:#fff;border-radius:4px;box-shadow:0 9px 26px rgba(21,60,98,.05)}
+.perk svg{width:36px;height:36px;margin-bottom:22px;fill:none;stroke:#1B6DB0;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.perk h3{margin:0 0 8px;font:400 22px/1.25 var(--serif)}.perk p{margin:0;font-size:15px;line-height:1.65}
+.perk-footnote{margin:32px 0 0;text-align:center;font-size:13px;color:#5f6a72}
+/* steps */
+.rewards-steps{background:#fff}
+.step-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:0;padding:0;list-style:none;counter-reset:none}
+.step-list li{padding:0 8px;border-top:2px solid #153C62;padding-top:26px}
+.step-list span{display:block;color:#F69B22;font:700 14px var(--sans);letter-spacing:1.5px}
+.step-list h3{margin:12px 0 10px;font:400 24px/1.25 var(--serif)}.step-list p{margin:0;font-size:16px;line-height:1.7;max-width:330px}
+/* join */
+.rewards-join{background:#f5f4f0}
+.rewards-join-inner{display:grid;grid-template-columns:1fr minmax(0,500px);gap:90px;align-items:center;max-width:1240px;margin:auto}
+.rewards-join-copy>p:not(.about-kicker){max-width:470px;margin:24px 0 0;font-size:17px;line-height:1.7}
+.rewards-join-copy .rewards-join-help{margin-top:16px!important;font-size:15px}.rewards-join-help a{color:#1B6DB0;font-weight:600;border-bottom:1px solid currentColor}
+.rewards-form-card{padding:40px;background:#fff;border-radius:4px;box-shadow:0 14px 40px rgba(21,60,98,.08)}
+.rewards-form{display:grid;gap:18px}
+.rewards-form label{display:flex;flex-direction:column;gap:7px;color:#153C62;font-size:14px;font-weight:600}
+.rewards-form input[type=text],.rewards-form input[type=tel],.rewards-form input[type=email]{width:100%;min-height:52px;padding:12px 15px;border:1px solid #cbd5dc;border-radius:4px;background:#fff;color:#454543;font:400 16px var(--sans);transition:border-color .2s,box-shadow .2s}
+.rewards-form input:focus{outline:0;border-color:#1B6DB0;box-shadow:0 0 0 3px rgba(27,109,176,.15)}
+.rewards-form .is-invalid{border-color:#c0392b!important}
+.field-error{min-height:0;color:#b3261e;font-size:13px;font-weight:500}.field-error:empty{display:none}
+.rewards-form .rewards-consent{display:grid;grid-template-columns:22px 1fr;gap:4px 12px;align-items:start;font-weight:400;color:#454543;font-size:14px;line-height:1.55;cursor:pointer}
+.rewards-consent input{width:20px;height:20px;margin:1px 0 0;accent-color:#1B6DB0}.rewards-consent .field-error{grid-column:2}
+.rewards-form .button{width:100%;margin-top:6px}
+.rewards-success{text-align:center;padding:12px 0}.rewards-success:focus{outline:0}
+.rewards-success svg{width:52px;height:52px;fill:none;stroke:#1B6DB0;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.rewards-success h3{margin:14px 0 10px;color:#153C62;font:400 30px/1.2 var(--serif)}.rewards-success p{margin:0 0 26px;font-size:16px;line-height:1.65}
+/* book */
+.rewards-book{background:#fff}
+.rewards-book-inner{max-width:820px;margin:auto;text-align:center}
+.rewards-book-inner>p:not(.about-kicker){max-width:560px;margin:24px auto 32px;font-size:17px;line-height:1.7}
+.rewards-booking{margin:0 auto;border:1px solid #dfe5e9;box-shadow:0 12px 30px rgba(21,60,98,.08);text-align:left}
+/* faq */
+.rewards-faq{background:#f7f7f5}.rewards-faq-inner{max-width:860px;margin:auto}
+.faq-item{border-bottom:1px solid #dcd9d2}.faq-item:first-child{border-top:1px solid #dcd9d2}
+.faq-item h3{margin:0}
+.faq-item button{display:flex;justify-content:space-between;align-items:center;gap:20px;width:100%;padding:24px 4px;border:0;background:none;color:#153C62;font:600 17px/1.4 var(--sans);text-align:left;cursor:pointer}
+.faq-item button:hover{color:#1B6DB0}
+.faq-item button span{position:relative;flex:none;width:16px;height:16px}.faq-item button span:before,.faq-item button span:after{content:'';position:absolute;top:7px;left:0;width:16px;height:2px;background:currentColor;transition:transform .25s}
+.faq-item button span:after{transform:rotate(90deg)}.faq-item button[aria-expanded=true] span:after{transform:rotate(0)}
+.faq-panel p{margin:0 4px 24px;max-width:700px;font-size:16px;line-height:1.7}.faq-panel a{color:#1B6DB0;border-bottom:1px solid currentColor}
+/* homepage band */
+.rewards-band{background:#eff4f7;color:#454543;padding:104px max(32px,6vw)}
+.rewards-band-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center;max-width:1240px;margin:auto}
+.rewards-band-copy>p:not(.about-kicker){max-width:480px;margin:24px 0 0;font-size:17px;line-height:1.7}
+.rewards-band-copy a{display:inline-block;margin-top:24px;color:#1B6DB0;font-weight:600;border-bottom:1px solid currentColor;padding-bottom:3px}.rewards-band-copy a:hover{color:#165990}
+.rewards-band-inner>div:last-child{padding:36px;background:#fff;border-radius:4px;box-shadow:0 14px 40px rgba(21,60,98,.08)}
+.rewards-band .rewards-form{grid-template-columns:1fr 1fr;gap:16px}.rewards-band .rewards-form .full{grid-column:1/-1}
+@media(max-width:1024px){.perk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.rewards-page .section,.rewards-band{padding:80px 32px}.rewards-hero{height:480px}.rewards-hero h1{font-size:44px}.rewards-hero-inner{width:calc(100% - 64px);margin-bottom:64px}.tier-grid{gap:16px}.tier-card{padding:32px 22px}.tier-rate{font-size:62px}.step-list{gap:16px}.rewards-join-inner,.rewards-band-inner{grid-template-columns:1fr;gap:50px}.rewards-join-inner{max-width:640px}}
+@media(max-width:700px){.tier-grid,.step-list{grid-template-columns:1fr}.tier-card-featured,.tier-card-featured.reveal.visible{transform:none}.step-list li{padding-left:0}}
+@media(max-width:560px){.rewards-band-inner>div:last-child{padding:24px 18px}.rewards-page .section,.rewards-band{padding:64px 20px}.rewards-hero{height:440px}.rewards-hero h1{font-size:38px}.rewards-hero h1 br{display:none}.rewards-hero-inner{width:calc(100% - 40px);margin-bottom:48px}.rewards-hero-inner>p:not(.about-kicker){font-size:16px}.rewards-hero-actions .button{flex:1 1 100%}.rewards-page h2,.rewards-band h2{font-size:32px}.rewards-page h2 br,.rewards-band h2 br{display:none}.rewards-heading{margin-bottom:36px}.perk-grid{grid-template-columns:1fr 1fr;gap:12px}.perk{padding:22px 16px}.perk svg{width:30px;height:30px;margin-bottom:14px}.perk h3{font-size:18px}.perk p{font-size:14px}.rewards-join-inner{gap:36px}.rewards-form-card{padding:26px 20px}.rewards-band .rewards-form{grid-template-columns:1fr}.faq-item button{font-size:16px;padding:20px 2px}}
+@media(prefers-reduced-motion:reduce){.tier-card-featured{transform:none}}
+@media(max-width:560px){.rewards-hero{height:auto;min-height:440px}.rewards-hero-inner{margin-top:130px}
+.tier-card{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"rate name" "rate rule" "note note";column-gap:20px;align-items:center;text-align:left;padding:22px 20px}
+.tier-rate{grid-area:rate;margin:0!important;font-size:54px}.tier-name{grid-area:name;align-self:end}.tier-rule{grid-area:rule;align-self:start;font-size:16px}.tier-note{grid-area:note;margin-top:16px!important;padding-top:14px;font-size:14px}}
+.rewards-form .button,.faq-item button{font-family:var(--sans)}
